@@ -1,24 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../statics/style.css" />
     <title>Campus Buddy</title>
 </head>
+
 <body>
     <!--Header Section Code-->
     <header>
         <header class="header">
             <div>
                 <img src="" alt="logo">
-                <div>
-                    <a href="index.html">Home</a>
-                    <a href="/Template/signin.html">Login</a>
-                    <a href="/Template/register.html">Register</a>
-                </div>
+                <nav>
+                    <ul class="navbar">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li>
+                            <div class="dropdown">
+                                <a href="#">Services ▼</a>
+                                <div class="dropdown-content">
+                                    <a href="#">Saved Notes</a>
+                                    <a href="#">Notepad</a>
+                                    <a href="#">Upload Notes</a>
+                                    <a href="#">Upcoming Events</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="top-btn">
+                        <a href="#" class="nav-btn">Sign Up</a>
+                    </div>
+                    <div class="top-btn">
+                        <a href="#" class="nav-btn">Sign In</a>
+                    </div>
+
+                </nav>
             </div>
         </header>
     </header>
+
+    <!--About Section Code-->
+    <section class="about-container" id="about">
+        <div class="container">
+            <div class="title">
+                <h2>About Us</h2>
+            </div>
+            <div class="content">
+                <div class="article">
+                    <p>Welcome to Campus Buddy, your ultimate platform for simplifying student life. Here, you can:<br>
+                        -Save and share notes effortlessly.<br>
+                        -Create new notes for better learning.<br>
+                        -Access a wide range of shared resources.<br>
+                        -Stay updated with all upcoming campus events in one place.<br>
+                        Whether you're prepping for exams or planning to attend a seminar,
+                        Campus Buddy is your go-to tool for staying organized and connected.
+                        Join us in building a smarter, more collaborative campus community!</p>
+                </div>
+                <div class="image-section">
+                    <img src="../statics/Assets/cb26.jpg"
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
+
 </html>
