@@ -1,4 +1,4 @@
-/* General Styles */
+/* General Styles */    /*is me koi changes nhi hongi ye general h*/
 * {
     margin: 0;
     padding: 0;
@@ -106,7 +106,7 @@ footer {
     background-color: var(--bg-color);
     color: #fff;
     padding: 20px;
-    text-align: center;
+    text-align: center;             /*yhn tk same rhega*/
 }
 
 /*Navbar Code*/                     /*yahin pr logo ka code bhi aayegaa*/
