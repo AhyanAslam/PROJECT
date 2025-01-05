@@ -171,7 +171,7 @@ Header {
     display: none;
     position: absolute;
     background-color: var(--main-color);
-    box-shadow: var(--main-color);
+    /*box-shadow: var(--main-color);*/
     min-width: 150px;
     z-index: 1;
 }
@@ -243,6 +243,23 @@ a:hover {
     color: #2b1807;
 }
 
+.nav-btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: transparent;
+    color: var(--bg-color);
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: all 0.2 ease;
+}
+
+.nav-btn:hover {
+    background: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 0 18px var(--bg-color);
+}
+
 /*About Section Code*/
 
 .container {
@@ -264,10 +281,11 @@ a:hover {
 }
 .content .article h2{
     color: var(--bg-color);
+    
 }
 
 
-.container .title h2::after {
+.container .title .content .article h2::after {
     content: "About Us";
     height: 6px;
     width: 180px;
