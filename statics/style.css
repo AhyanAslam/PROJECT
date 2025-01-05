@@ -13,8 +13,8 @@
 }
 
 :root {
-    --bg-color: #ffffff;
-    --snd-bg-color: rgb(255, 255, 255);
+    --bg-color: #372E29;
+    --snd-bg-color: #372E29;
     --text-color: rgb(7, 7, 7);
     --main-color: #fbc02d;
     text-align: center;
@@ -30,7 +30,7 @@ body {
     background: var(--bg-color);
     font-family: 'Arial', sans-serif;
     color: var(--main-color);
-    background-color: #ffffff;
+    background-color: #372E29;
     line-height: 1.6;
     font-size: 16px;
 }
