@@ -28,23 +28,23 @@ def home():
 @app.route('/signin', methods=["GET","POST"])
 def signin():
     if request.method == "POST":
-        user_id = request.form["userid"]  # Get user ID from the form
+        user_id = request.form["user_id"]  # Get user ID from the form
         password = request.form["password"]  # Get password from the form
         users = load_users()  # Load existing users
 
         if user_id in users and users[user_id] == password:
-            return redirect(url_for('home')) # after checking correct id password open home page
+            return render_template('index.html') # after checking correct id password open home page
         else:
             flash("Invalid User ID or Password.")  # if any input is incorrect this message will show on the page
 
-    return render_template("login.html") 
+    return render_template("index.html") 
 
-# rendered register page, 
+# rendered register page,
 @app.route('/register', methods=["GET", "POST"])
 def register():
     # getting the information
     if request.method == "POST":
-        user_id = request.form["userid"]
+        user_id = request.form["user_id"]
         password = request.form["password"]
         users = load_users()
 
@@ -56,8 +56,10 @@ def register():
             users[user_id] = password
             save_users(users)
             flash("Registration successful! You can now log in.")
-            return redirect(url_for('register'))
+            return redirect(url_for('signin'))  # Redirect to login page
+
     return render_template("register.html")
+
     
 if __name__ == '__main__':
     app.run(debug=True)

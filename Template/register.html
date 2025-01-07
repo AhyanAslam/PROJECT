@@ -6,6 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Buddy</title>
     <link rel="stylesheet" href="../statics/style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          document
+            .getElementById("registerform")
+            .addEventListener("submit", function (event) {
+              event.preventDefault();
+  
+              // Define valid credentials
+              const validUserId = "misha";
+              const validPassword = "12345";
+              
+              // Get user input
+              const userId = document.getElementById("user_id").value;
+              const userPassword = document.getElementById("password").value;
+  
+              // Check credentials
+              if (userId === validUserId && userPassword === validPassword) {
+                alert("Registeration successful!");
+                // Redirect or perform other actions here
+              } else {
+                let errorMessage = document.getElementById("errorMessage");
+                if (!errorMessage) {
+                  errorMessage = document.createElement("p");
+                  errorMessage.id = "errorMessage";
+                  errorMessage.style.color = "red";
+                  document
+                    .getElementById("registerform")
+                    .appendChild(errorMessage);
+                }
+                errorMessage.textContent = "Invalid User ID or Password.";
+              }
+            });
+        });
+      </script>
 </head>
 <body>
     <!--Header Section Code-->
@@ -20,21 +54,21 @@
         </div>
     </header>
     <div>
-        <h1>registeration form</h1>
-        <form action="{{ url_for('register') }}" method="POST">
+        <h1>Registration Form</h1>
+        <form action="signin.html"  id="registerform">
             <div>
-                <label for="user_id">user id</label>
-                <input type="text" id="user_id" name="user_id" required>
+                <label for="user_id">User ID</label>
+                <input type="text" id="user_id" name="user_id" required />
             </div>
             <div>
-                <label for="password">password</label>
-                <input type="password" id="password" name="password" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
             </div>
             <div>
-                <button type="submit">Register</button>
+                <input type="submit" value="REGISTER" />
             </div>
         </form>
-      <p>Already have an account?<a href="/login">Login here</a></p>
+        <p>Already have an account? <a href="signin.html">Login here</a></p>
     </div>
 </body>
 </html>
