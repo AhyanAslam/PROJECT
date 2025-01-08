@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../statics/style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
     <title>Campus Buddy</title>
 </head>
@@ -53,7 +53,7 @@
             <h2>As I was saying that this website have some purpose </h2>
             <p>...............................................................slide show lage ga neechay wali picture main............................................................................................</p>
             <div id="slide">
-                <img src="/statics/Assets/cb27.jpg" alt="">
+              <img src="{{ url_for('static', filename='Assets/cb27.jpg') }}" alt="cb27">
             </div>
         </section>
 
@@ -75,7 +75,7 @@
                         Join us in building a smarter, more collaborative campus community!</p>
                 </div>
                 <div class="image-section">
-                    <img src="../statics/Assets/cb40.jpg"
+                  <img src="{{ url_for('static', filename='Assets/cb40.jpg') }}" alt="cb40">
                 </div>
             </div>
         </div>
