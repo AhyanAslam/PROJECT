@@ -93,7 +93,7 @@ textarea:focus {
 
 /* Cards */
 .card {
-    background-color: #fff;
+    background-color: var(--bg-color);
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -327,3 +327,116 @@ a:hover {
     height: auto;
 }
 
+/*Service Section Code*/
+
+.services {
+    width: 1300px;
+    padding: 30px 60px;
+    margin: auto;
+  }
+  
+  .services h2{
+    color: var(--main-color);
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    margin-bottom: 30px;
+    position: relative;
+    font-weight: 600;
+  
+  }
+  
+  .services h2::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50px);
+    width: 150px;
+    height: 3px;
+    background-color: var(--bg-color);
+  }
+  
+  .cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card{
+    width: 220px;
+    height: 290px;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 40px 12px;
+    margin: 0 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: 3s;
+    position: relative;
+    
+  }
+  
+  .sbox i {
+    font-size: 36px;
+    /*border: 1px solid rgba(0, 0, 0, 0.5);*/
+    padding: 15px;
+    transition: 0.5s;
+    color: var(--bg-color);
+  }
+  
+  .sbox h3{
+    font-size: 24px;
+    color: var(--bg-color);
+  }
+  
+  .sbox p{
+    margin: 20px 0;
+    color: var(--bg-color);
+  }
+  
+  .sbox a {
+    display: inline-block;
+      font-size: 22px;
+      line-height: 1.2rem;
+      font-weight: 700;
+      padding: 7px 0;
+      color: var(--text-color);
+      border-bottom: var(--bg-color);
+      transition: all 0.2s ease;
+  }
+  
+  .sbox a:hover{
+    border-bottom: 2px solid var(--bg-color);
+  }
+  
+  .card:hover .sbox i{
+    background: white;
+    color:var(--main-color);
+    border-color: var(--main-color);
+  }
+  
+  .card::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+  }
+  
+  .card:hover::after{
+    transform: rotate(13deg);
+    background-color: white;
+  }
+.content{
+    position: absolute;
+    left: 110px;
+}
+.servicesmainheading{
+    position: relative;
+    top: 30px;
+}

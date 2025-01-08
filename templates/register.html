@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Buddy</title>
+    <link rel="stylesheet" href="../statics/style.css" />
+  </head>
+  <body>
+    <!--Header Section Code-->
+    <header class="header">
+      <div>
+        <img src="" alt="logo" />
+        <div>
+          <a href="/">Home</a>
+          <a href="/signin">Login</a>
+          <a href="/register">Register</a>
+        </div>
+      </div>
+    </header>
+
+    <div>
+      <h1>Registration Form</h1>
+
+      <form action="/register" method="POST" id="registerform">
+        <div>
+          <label for="user_id">User ID</label>
+          <input type="text" id="user_id" name="user_id" required />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div>
+          <input type="submit" value="REGISTER" />
+        </div>
+      </form>
+      <p>Already have an account? <a href="/signin">Login here</a></p>
+    </div>
+  </body>
+</html>
