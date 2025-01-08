@@ -2,6 +2,15 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 import json
 import os 
 
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+if __name__ == '_main_':
+    app.run(debug=True)
+
 app = Flask(__name__)  #initializing flask
 app.secret_key = "supersecretkey"  #requirement for using flash
 
