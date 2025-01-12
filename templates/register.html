@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Campus Buddy</title>
-    
-  </head>
-  <body>
-    <!--Header Section Code-->
-    <header class="header">
-      <div>
-        <img src="" alt="logo" />
-        <div>
-          <a href="/">Home</a>
-          <a href="/signin">Login</a>
-          <a href="/register">Register</a>
-        </div>
-      </div>
-    </header>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='signin.css') }}">
+  <title>Campus Buddy</title>
+
+</head>
+
+<body>
+  <!--Header Section Code-->
+  <header class="header">
     <div>
-      <h1>Registration Form</h1>
-
-      <form action="/register" method="POST" id="registerform">
-        <div>
-          <label for="user_id">User ID</label>
-          <input type="text" id="user_id" name="user_id" required />
-        </div>
-        <div>
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" required />
-        </div>
-        <div>
-          <input type="submit" value="REGISTER" />
-        </div>
-      </form>
-      <p>Already have an account? <a href="/signin">Login here</a></p>
+      <img src="" alt="logo" />
+      <div>
+        <a href="/">Home</a>
+        <a href="/signin">Login</a>
+        <a href="/register">Register</a>
+      </div>
     </div>
-  </body>
+  </header>
+  <div class="wrapper login-wrapper">
+    <form action="/register" method="POST" id="loginform">
+      <h2>Signup</h2>
+      <div class="input-box">
+        <input type="text" id="user_id" name="user_id" placeholder="ENTER USER_ID" required />
+      </div>
+
+      <div class="input-box">
+        <input type="password" id="password" placeholder="password" required />
+      </div>
+      <button type="submit" class="btn">Login</button>
+
+      <div class="register-link">
+        <p>
+          Already have an anaccount?
+          <a href="/signin">Signin</a>
+        </p>
+      </div>
+    </form>
+  </div>
+</body>
+
 </html>
