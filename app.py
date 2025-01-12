@@ -76,7 +76,6 @@ def register():
 
     return render_template("register.html")
 
-<<<<<<< HEAD
 # notepad
 @app.route('/notepad', methods=['GET'])
 def show_notepad():
@@ -94,9 +93,6 @@ def write_to_file():
 @app.route('/viewnotes', methods=['GET'])
 def show_notes():
     return render_template('viewnotes.html')
-=======
-
->>>>>>> 2a0940da082c7cdf23e2fda08eb6445eb1b8dc94
 
 
     
