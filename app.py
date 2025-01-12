@@ -46,6 +46,10 @@ def signin():
         users = load_users()  # Load existing users
 
         if any(user["user_id"] == user_id and user["password"] == password for user in users):
+            #localStorage.set
+            # todo, python m localStorage ks trh use krte, wo dekho phrle
+            # yhn pr localStorage m data save krdo, mtlb us user ko
+            # aur phr navbar m dekho k localStorage m agar user hai to navbar m signup , signin ko remove krke logut button show krdo, phr agar s logout pr click kre to logut api cll krwado, usme localStorage s data remove krdo
             return redirect("/home")  # ✅ Redirect to home page
         else:
             flash("Invalid User ID or Password.")  # Show error message
@@ -71,6 +75,9 @@ def register():
             return redirect("/") 
 
     return render_template("register.html")
+
+
+
 
     
 if __name__ == '__main__':
