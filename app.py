@@ -72,6 +72,25 @@ def register():
 
     return render_template("register.html")
 
+# notepad
+@app.route('/notepad', methods=['GET'])
+def show_notepad():
+    return render_template('notepad.html')
+
+@app.route('/save_note', methods=['POST'])
+def write_to_file():
+    text = request.form['notes']
+    with open("note.txt", "a") as file:
+        file.write(text + "\n\n")  
+
+    return "Text has been written to the file! <a href='/notepad'>Go Back</a>"
+
+#View notes code
+@app.route('/viewnotes', methods=['GET'])
+def show_notes():
+    return render_template('viewnotes.html')
+
+
     
 if __name__ == '__main__':
     app.run(debug=True)

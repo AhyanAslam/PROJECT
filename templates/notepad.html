@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NOTEPAD</title>
     <link rel="stylesheet" href="/static/notepad.css">
 </head>
 <body>
     <div>
         <center><h1>Notepad</h1></center>
-        <label for="notes">Your Notes:</label><br>
-        <textarea class="notes" id="notes" name="notes" placeholder="Write your notes here..."></textarea><br><br>
-
+        <form action="/save_note" method="POST">
+            <label for="notes">Your Notes:</label><br>
+            <textarea id="notes" name="notes" placeholder="Write your notes here..." style="width: 300px; height: 150px;"></textarea><br><br>
+            <button type="submit">SAVE</button>
+        </form>
     </div>
 </body>
 </html>
