@@ -137,3 +137,12 @@ button:hover {
 .register-link p a:hover {
     text-decoration: underline;
 }
+.box{
+    position: relative;
+    top: 160px;
+    left: 450px;
+    width: 30%;
+    border: 3px solid #fbc02d;
+    border-radius: 30px;
+    
+}
