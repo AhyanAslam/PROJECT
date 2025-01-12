@@ -125,6 +125,25 @@ Header {
     transition: all 0.5s ease;
 }
 
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2 ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+
+
+}
+
+span {
+    color: var(--bg-color);
+
+}
+
 .navbar {
     display: flex;
 

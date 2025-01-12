@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='signin.css') }}">
-    <title>SIGN-IN</title>
-    
-    <!--<script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='signin.css') }}">
+  <title>SIGN-IN</title>
+
+  <!--<script>
       document.addEventListener("DOMContentLoaded", function () {
         document
           .getElementById("loginform")
@@ -42,46 +43,40 @@
           });
       });
     </script>-->
-  </head>
-  <body>
-    <!--Header Section Code-->
-    <header class="header">
+</head>
+
+<body>
+  <!--Header Section Code-->
+  <!--<header class="header">
+    <div>
+      <img src="" alt="logo" />
       <div>
-        <img src="" alt="logo" />
-        <div>
-          <a href="index.html">Home</a>
-          <a href="signin.html">Login</a>
-          <a href="register.html">Register</a>
-        </div>
+        <a href="index.html">Home</a>
+        <a href="signin.html">Login</a>
+        <a href="register.html">Register</a>
       </div>
-    </header>
-    <center>
-      <div class="logindiv">
-        <h1 class="loginhead">LOGIN</h1>
-        <form action="/signin" method="POST" id="loginform">
-          <div>
-            <input
-              type="text"
-              id="user_id"
-              name="user_id"
-              placeholder="ENTER USER_ID"
-              required
-            />
-          </div>
-          <div>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="ENTER PASSWORD"
-              required
-            />
-          </div>
-          <div>
-            <input type="submit" value="LOGIN" />
-          </div>
-        </form>
+    </div>
+  </header>-->
+  <div class="wrapper login-wrapper">
+    <form action="/signin" method="POST" id="loginform">
+      <h2>Signin</h2>
+      <div class="input-box">
+        <input type="text" id="user_id" name="user_id" placeholder="ENTER USER_ID" required />
       </div>
-    </center>
-  </body>
+
+      <div class="input-box">
+        <input type="password" id="password" placeholder="password" required />
+      </div>
+      <button type="submit" class="btn">Login</button>
+
+      <div class="register-link">
+        <p>
+          Don't have anaccount?
+          <a href="/register">Register</a>
+        </p>
+      </div>
+    </form>
+  </div>
+</body>
+
 </html>
