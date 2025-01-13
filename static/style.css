@@ -451,9 +451,9 @@ a:hover {
     transform: rotate(13deg);
     background-color: white;
   }
-.content{
+.servicesmainheading .content{
     position: absolute;
-    left: 110px;
+    /*left: 110px;*/
 }
 .servicesmainheading{
     position: relative;

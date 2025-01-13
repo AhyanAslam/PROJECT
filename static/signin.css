@@ -79,7 +79,7 @@ button:hover {
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid var(--bg-color);
+    border: 2px solid var(--main-color);
     border-radius: 40px;
     font-size: 16px;
     color: var(--main-color);
@@ -129,7 +129,7 @@ button:hover {
 }
 
 .register-link p a {
-    color: var(--text-color);
+    color: var(--bg-color);
     text-decoration: none;
     font-weight: 600;
 }
