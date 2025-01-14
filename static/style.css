@@ -452,7 +452,7 @@ a:hover {
     background-color: white;
   }
 .content{
-    position: absolute;
+    /* position: absolute; */
     left: 110px;
 }
 .servicesmainheading{
@@ -461,13 +461,13 @@ a:hover {
 }
 /*Gallery Section Code*/
 .gallerydiv{
-    position: relative;
+    /* position: relative; */
     top: 500px;
     background-color: #fbc02d;
     border-radius: 20px;
 }
 .mainhead{
-    position: relative;
+    /* position: relative; */
     top: 450px;
 }
 .img{
