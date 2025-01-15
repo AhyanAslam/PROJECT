@@ -451,9 +451,9 @@ a:hover {
     transform: rotate(13deg);
     background-color: white;
   }
-.servicesmainheading .content{
-    position: absolute;
-    /*left: 110px;*/
+.content{
+    /* position: absolute; */
+    left: 110px;
 }
 .servicesmainheading{
     position: relative;
@@ -461,13 +461,13 @@ a:hover {
 }
 /*Gallery Section Code*/
 .gallerydiv{
-    position: relative;
+    /* position: relative; */
     top: 500px;
     background-color: #fbc02d;
     border-radius: 20px;
 }
 .mainhead{
-    position: relative;
+    /* position: relative; */
     top: 450px;
 }
 .img{
