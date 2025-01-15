@@ -2,217 +2,235 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
-    <title>Campus Buddy</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <title>Campus Buddy</title>
 </head>
 
 <body>
-    <!--Header Section Code-->
-    <header>
-        <header class="header">
-            <div>
-              <a href="#home" class="logo">Campus <span>Buddy</span></a>
-                <nav>
-                    <ul class="navbar">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li>
-                            <div class="dropdown">
-                                <a href="#service">Services ▼</a>
-                                <div class="dropdown-content">
-                                    <a href="/viewnotes">Saved Notes</a>
-                                    <a href="/notepad">Notepad</a>
-                                    <a href="#">Upload Notes</a>
-                                    <a href="#">Upcoming Events</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                    <div class="top-btn">
-                        <a href="/register" class="nav-btn">Sign Up</a>
-                    </div>
-                    <div class="top-btn">
-                        <a href="/signin" class="nav-btn">Sign In</a>
-                    </div>
+  <!--Header Section Code-->
+  <header>
+    <header class="header">
+      <div>
+        <a href="#home" class="logo">Campus <span>Buddy</span></a>
+        <nav>
+          <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li>
+              <div class="dropdown">
+                <a href="#service">Services ▼</a>
+                <div class="dropdown-content">
+                  <a href="/viewnotes">Saved Notes</a>
+                  <a href="/notepad">Notepad</a>
+                  <a href="#">Upload Notes</a>
+                  <a href="#">Upcoming Events</a>
+                </div>
+              </div>
+            </li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="navbar">
+            <a href="/register" class="navbar">Sign Up</a>
+          </div>
+          <div class="navbar">
+            <a href="/signin" class="navbar">Sign In</a>
+          </div>
 
-                    
-                </nav>
-            </div>
-        </header>
+
+        </nav>
+      </div>
     </header>
-    <!--Home Section Code-->
-    <h1>HOME</h1>
-    
+  </header>
 
+  <!--Home Section Code-->
 
+  <section class="home" id="home">
+    <div class="home-content">
+      <h3>Campus Buddy:</h3>
+      <h1>For Students,</h1>
+      <h3><span class="multiple=text">By Students</span></h3>
 
-    <!--About Section Code-->
-    <section class="about-container" id="about">
-        <div class="container">
-            <div class="title">
-            </div>
-            <div class="content">
-                <div class="article">
-                    <h2>About Us</h2>
-                    <p>Welcome to Campus Buddy, your ultimate platform for simplifying student life. Here, you can:<br>
-                        -Save and share notes effortlessly.<br>
-                        -Create new notes for better learning.<br>
-                        -Access a wide range of shared resources.<br>
-                        -Stay updated with all upcoming campus events in one place.<br>
-                        Whether you're prepping for exams or planning to attend a seminar,
-                        Campus Buddy is your go-to tool for staying organized and connected.
-                        Join us in building a smarter, more collaborative campus community!</p>
-                </div>
-                <div class="image-section">
-                  <img src="{{ url_for('static', filename='Assets/cb40.jpg') }}" alt="cb40">
-                </div>
-            </div>
+      <p>
+        A Seamless Platform Designed to Empower Students with Easy Access to Notes,
+         and Secure Document Storage for a Stress-Free Campus Life!
+      </p>
+
+      <!--<a href="#" class="btn mt-15px">Join Us</a>-->
+    </div>
+  </section>
+
+  <!--About Section Code-->
+
+  <section class="about-container" id="about">
+    <div class="container">
+      <div class="title">
+      </div>
+      <div class="content">
+        <div class="article">
+          <h2>About Us</h2>
+          <p>Welcome to Campus Buddy, your ultimate platform for simplifying student life. Here, you can:<br>
+            -Save and share notes effortlessly.<br>
+            -Create new notes for better learning.<br>
+            -Access a wide range of shared resources.<br>
+            -Stay updated with all upcoming campus events in one place.<br>
+            Whether you're prepping for exams or planning to attend a seminar,
+            Campus Buddy is your go-to tool for staying organized and connected.
+            Join us in building a smarter, more collaborative campus community!</p>
         </div>
-    </section>
+        <div class="image-section">
+          <img src="{{ url_for('static', filename='Assets/cb40.jpg') }}" alt="cb40">
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!--Service Section Code-->
+  <!--Service Section Code-->
 
-    <section class="service" id="service">
-        <div class="services">
-          <h2 class="servicesmainheading">Our Services</h2>
-          <div class="content">
-            <div class="cards">
-              <div class="card">
-                <div class="sbox">
-                  <i class="fa-solid fa-file-pdf"></i>
-                  <h3>Store PDFs</h3>
-                  <p>Store your important PDFs without the fear </p>
-                  <a href="#"> Sign up </a>
-                </div>
-              </div>
-              <div class="card">
-                <div class="sbox">
-                  <i class="fa-solid fa-file"></i>
-                  <h3>Upload PDFs</h3>
-                  <p>Upload PDFs to help other students and </p>
-                  <a href="#"> Sign up </a>
-                </div>
-              </div>
-              <div class="card">
-                <div class="sbox">
-                  <i class="fa-solid fa-clipboard"></i>
-                  <h3>Notepad</h3>
-                  <p>A notepad for you so you can make your </p>
-                  <a href="#"> Sign up </a>
-                </div>
-              </div>
-              <div class="card">
-                <div class="sbox">
-                  <i class="fa-solid fa-calendar-days"></i>
-                  <h3>Events Calendar</h3>
-                  <p>get every update related to campus and </p>
-                  <a href="#"> Sign up </a>
-                </div>
-              </div>
+  <section class="service" id="service">
+    <div class="services">
+      <h2 class="servicesmainheading">Our Services</h2>
+      <div class="content">
+        <div class="cards">
+          <div class="card">
+            <div class="sbox">
+              <i class="fa-solid fa-file-pdf"></i>
+              <h3>Store PDFs</h3>
+              <p>Store your important PDFs without the fear </p>
+              <a href="#"> Sign up </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="sbox">
+              <i class="fa-solid fa-file"></i>
+              <h3>Upload PDFs</h3>
+              <p>Upload PDFs to help other students and </p>
+              <a href="#"> Sign up </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="sbox">
+              <i class="fa-solid fa-clipboard"></i>
+              <h3>Notepad</h3>
+              <p>A notepad for you so you can make your </p>
+              <a href="#"> Sign up </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="sbox">
+              <i class="fa-solid fa-calendar-days"></i>
+              <h3>Events Calendar</h3>
+              <p>get every update related to campus and </p>
+              <a href="#"> Sign up </a>
             </div>
           </div>
         </div>
-      </section>
-      <!--Gallery Section Code-->
-      <section class="gallery" id="gallery">
-        <div>
-          <center><h1 class="mainhead">GALLERY</h1></center>
+      </div>
+    </div>
+  </section>
+
+  <!--Gallery Section Code-->
+
+  <section class="gallery" id="gallery">
+    <div>
+      <center>
+        <h1 class="mainhead">GALLERY</h1>
+      </center>
+    </div>
+    <div class="gallerydiv">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb2.jpg') }}" alt="cb2">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb3.jpg') }}" alt="cb3">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb4.jpg') }}" alt="cb4">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb5.jpg') }}" alt="cb5">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb7.jpg') }}" alt="cb7">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb9.jpg') }}" alt="cb9">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb10.jpg') }}" alt="cb10">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb11.jpg') }}" alt="cb11">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb12.jpg') }}" alt="cb12">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb13.jpg') }}" alt="cb13">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb14.jpg') }}" alt="cb14">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb15.jpg') }}" alt="cb15">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb16.jpg') }}" alt="cb16">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb17.jpg') }}" alt="cb17">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb18.jpg') }}" alt="cb18">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb19.jpg') }}" alt="cb19">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb20.jpg') }}" alt="cb20">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb21.jpg') }}" alt="cb21">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb22.jpg') }}" alt="cb22">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb23.jpg') }}" alt="cb23">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb24.jpg') }}" alt="cb24">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb25.jpg') }}" alt="cb25">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb26.jpg') }}" alt="cb26">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb27.jpg') }}" alt="cb27">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb28.jpg') }}" alt="cb28">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb29.jpg') }}" alt="cb29">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb30.jpg') }}" alt="cb30">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb31.jpg') }}" alt="cb31">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb32.jpg') }}" alt="cb32">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb33.jpg') }}" alt="cb33">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb34.jpg') }}" alt="cb34">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb35.jpg') }}" alt="cb35">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb36.jpg') }}" alt="cb36">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb37.jpg') }}" alt="cb37">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb38.jpg') }}" alt="cb38">
+      <img class="img" src="{{ url_for('static', filename='Assets/cb39.jpg') }}" alt="cb39">
+
+
+    </div>
+
+  </section>
+
+  <!-- Footer Section Code-->
+
+  <section class="contact" id="contact">
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>logo lagana h </h3>
+          <p>
+            aur kch bh likh dena h yahan pr
+          </p>
         </div>
-        <div class="gallerydiv">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb2.jpg') }}" alt="cb2">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb3.jpg') }}" alt="cb3">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb4.jpg') }}" alt="cb4">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb5.jpg') }}" alt="cb5">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb7.jpg') }}" alt="cb7">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb9.jpg') }}" alt="cb9">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb10.jpg') }}" alt="cb10">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb11.jpg') }}" alt="cb11">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb12.jpg') }}" alt="cb12">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb13.jpg') }}" alt="cb13">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb14.jpg') }}" alt="cb14">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb15.jpg') }}" alt="cb15">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb16.jpg') }}" alt="cb16">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb17.jpg') }}" alt="cb17">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb18.jpg') }}" alt="cb18">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb19.jpg') }}" alt="cb19">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb20.jpg') }}" alt="cb20">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb21.jpg') }}" alt="cb21">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb22.jpg') }}" alt="cb22">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb23.jpg') }}" alt="cb23">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb24.jpg') }}" alt="cb24">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb25.jpg') }}" alt="cb25">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb26.jpg') }}" alt="cb26">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb27.jpg') }}" alt="cb27">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb28.jpg') }}" alt="cb28">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb29.jpg') }}" alt="cb29">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb30.jpg') }}" alt="cb30">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb31.jpg') }}" alt="cb31">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb32.jpg') }}" alt="cb32">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb33.jpg') }}" alt="cb33">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb34.jpg') }}" alt="cb34">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb35.jpg') }}" alt="cb35">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb36.jpg') }}" alt="cb36">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb37.jpg') }}" alt="cb37">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb38.jpg') }}" alt="cb38">
-          <img class="img" src="{{ url_for('static', filename='Assets/cb39.jpg') }}" alt="cb39">
-
-
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
-
-      </section>
-      
-      <section class="contact" id="contact">
-        <!-- Footer -->
-        <footer class="footer">
-          <div class="footer-container">
-              <div class="footer-section">
-                  <h3>logo lagana h </h3>
-                  <p>
-                    aur kch bh likh dena h yahan pr 
-                  </p>
-              </div>
-              <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                  <li><a href="#home">Home</a></li>
-                  <li><a href="#services">Services</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#contact">Contact</a></li>
-                </ul>
-              </div>
-              <div class="footer-section">
-                <h3>Services</h3>
-                <ul>
-                  <li><a href="#services">Store PDF</a></li>
-                  <li><a href="#services">Upload PDF</a></li>
-                  <li><a href="#services">Notepad</a></li>
-                  <li><a href="#services">Event Calender</a></li>
-                </ul>
-              </div>
-              <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                  <a href="#campusbuddy.com" target="_blank">Facebook</a>
-                  <a href="#campusbuddy.com" target="_blank">Twitter</a>
-                  <a href="#campusbuddy.com" target="_blank">Instagram</a>
-                </div>
-                <div class="social-icons">
-                  <a href="#campusbuddy.com" target="_blank">Linkedin</a>
-                  <a href="#campusbuddy.com" target="_blank">GitHub</a>
-                </div>
-              </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#services">Store PDF</a></li>
+            <li><a href="#services">Upload PDF</a></li>
+            <li><a href="#services">Notepad</a></li>
+            <li><a href="#services">Event Calender</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#campusbuddy.com" target="_blank">Facebook</a>
+            <a href="#campusbuddy.com" target="_blank">Twitter</a>
+            <a href="#campusbuddy.com" target="_blank">Instagram</a>
           </div>
-          <div class="footer-bottom">
-            &copy; 2025 Campus Buddy. All rights reserved.
+          <div class="social-icons">
+            <a href="#campusbuddy.com" target="_blank">Linkedin</a>
+            <a href="#campusbuddy.com" target="_blank">GitHub</a>
           </div>
-        </footer>
-      </section>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 Campus Buddy. All rights reserved.
+      </div>
+    </footer>
+  </section>
 
 
 </body>
