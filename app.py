@@ -90,9 +90,38 @@ def write_to_file():
     return "Text has been written to the file! <a href='/notepad'>Go Back</a>"
 
 #View notes code
+
+
+
+
 @app.route('/viewnotes', methods=['GET'])
 def show_notes():
-    return render_template('viewnotes.html')
+    notes = []
+    if os.path.exists("note.txt"):
+        with open("note.txt", "r") as file:
+            notes = [note.strip() for note in file.readlines() if note.strip()]  # Remove empty lines and strip whitespace
+
+    return render_template('viewnotes.html', notes=enumerate(notes))  # Pass enumerated notes (index + note)
+
+@app.route('/edit_note/<int:note_index>', methods=['GET', 'POST'])
+def edit_note(note_index):
+    notes = []
+    if os.path.exists("note.txt"):
+        with open("note.txt", "r") as file:
+            notes = [note.strip() for note in file.readlines() if note.strip()]  # Remove empty lines
+
+    if request.method == 'POST':
+        updated_note = request.form['updated_note']
+        if 0 <= note_index < len(notes):  # Ensure valid index
+            notes[note_index] = updated_note  # Update the note
+            with open("note.txt", "w") as file:
+                file.write("\n".join(notes) + "\n")  # Write updated notes back
+        return redirect('/viewnotes')  # Redirect to the notes page
+
+    # Render edit form for the selected note
+    return render_template('editnote.html', note=notes[note_index], note_index=note_index)
+
+
 
 
     

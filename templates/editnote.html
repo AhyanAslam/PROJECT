@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Note</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            margin: 5px 0;
+            color: #333;
+            font-size: 44px;
+            padding-top: 22px;
+        }
+        .edit-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            min-height: calc(100vh - 40px); /* Full height with padding adjustment */
+        }
+        .edit-form {
+            background-color: #fff;
+            border: 2px solid #000000;
+            border-radius: 8px;
+            padding-left: 20px;
+            padding-right: 43px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+            margin-bottom: 15px;
+        }
+        textarea::placeholder {
+            font-size: 14px;
+            color: #999;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .btn {
+            text-decoration: none;
+            color: #fff;
+            background-color: #000000;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+            flex: 1;
+            margin: 0 5px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .cancel-btn {
+            background-color: #6c757d;
+        }
+        .cancel-btn:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <h1>Edit Note</h1>
+    <div class="edit-container">
+        <form class="edit-form" method="POST">
+            <textarea name="updated_note" placeholder="Edit your note here..." required>{{ note }}</textarea>
+            <div class="btn-group">
+                <button type="submit" class="btn">Save</button>
+                <a href="/viewnotes" class="btn cancel-btn">Cancel</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
