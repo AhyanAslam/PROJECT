@@ -4,14 +4,14 @@ import os
 
 app = Flask(__name__)
 
-@app.route('/')
-def index():
+@app.route('/home' ,  methods=["GET", "POST"])
+def home():
     return render_template('index.html')
 
 if __name__ == '_main_':
     app.run(debug=True)
 
-app = Flask(__name__)  #initializing flask
+#app = Flask(__name__)  #initializing flask
 app.secret_key = "supersecretkey"  #requirement for using flash
 
 USER_DATA_FILE="users.json"  # file for storing users id password 
@@ -33,9 +33,9 @@ def save_users(users):
 
 # rendered home page
 @app.route('/')
-@app.route('/home')
-def home():
-    return render_template('index.html')
+@app.route('/landing')
+def landing():
+    return render_template('landingpage.html')
 
 # rendered login page, checking user id and password
 @app.route('/signin', methods=["GET", "POST"])
@@ -50,7 +50,7 @@ def signin():
             # todo, python m localStorage ks trh use krte, wo dekho phrle
             # yhn pr localStorage m data save krdo, mtlb us user ko
             # aur phr navbar m dekho k localStorage m agar user hai to navbar m signup , signin ko remove krke logut button show krdo, phr agar s logout pr click kre to logut api cll krwado, usme localStorage s data remove krdo
-            return redirect("/home")  # ✅ Redirect to home page
+            return redirect("/landing")  # ✅ Redirect to home page
         else:
             flash("Invalid User ID or Password.")  # Show error message
 
