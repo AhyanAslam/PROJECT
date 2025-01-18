@@ -121,6 +121,10 @@ def edit_note(note_index):
     # Render edit form for the selected note
     return render_template('editnote.html', note=notes[note_index], note_index=note_index)
 
+#event calander
+@app.route('/event')
+def event():
+    return render_template('event.html')
 
 
 
