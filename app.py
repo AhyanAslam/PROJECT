@@ -121,7 +121,63 @@ def edit_note(note_index):
     # Render edit form for the selected note
     return render_template('editnote.html', note=notes[note_index], note_index=note_index)
 
+#event calander
+@app.route('/event')
+def event():
+    return render_template('event.html')
 
+
+
+import uuid
+
+EVENTS_DATA_FILE = "events.json"
+
+def load_events():
+    if not os.path.exists(EVENTS_DATA_FILE):
+        return []
+    try:
+        with open(EVENTS_DATA_FILE, "r") as file:
+            return json.load(file)
+    except json.JSONDecodeError:
+        return []
+
+def save_events(events):
+    with open(EVENTS_DATA_FILE, "w") as file:
+        json.dump(events, file, indent=4, ensure_ascii=False)
+
+@app.route('/add_event', methods=['POST'])
+def add_event():
+    event_data = request.get_json()
+    events = load_events()
+
+    new_event = {
+        "id": str(uuid.uuid4()),  # Generate a unique ID for each event
+        "date": event_data["eventDate"],
+        "title": event_data["eventTitle"],
+        "description": event_data["eventDescription"]
+    }
+
+    events.append(new_event)
+    save_events(events)
+
+    return {"success": True, "event": new_event}
+
+
+@app.route('/get_events', methods=['GET'])
+def get_events():
+    events = load_events()  # Load events from file
+    return {"events": events}
+
+@app.route('/delete_event/<event_id>', methods=['DELETE'])
+def delete_event(event_id):
+    events = load_events()
+    updated_events = [event for event in events if event["id"] != event_id]
+    
+    if len(events) == len(updated_events):
+        return {"success": False}  # Event not found
+    
+    save_events(updated_events)
+    return {"success": True}
 
 
     
