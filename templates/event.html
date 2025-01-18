@@ -1,39 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-		content="width=device-width, 
-				initial-scale=1.0">
-	<link rel="stylesheet" href="../static/event.css">
-	<title>Dynamic Calendar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/event.css">
+    <title>Dynamic Calendar</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            fetch('/get_events')
+                .then(response => response.json())
+                .then(data => {
+                    data.events.forEach(event => displayEvent(event));
+                });
+        });
+
+        function add_event() {
+            const eventDate = document.getElementById("eventDate").value;
+            const eventTitle = document.getElementById("eventTitle").value;
+            const eventDescription = document.getElementById("eventDescription").value;
+
+            fetch('/add_event', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ eventDate, eventTitle, eventDescription }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    displayEvent(data.event);
+                } else {
+                    alert("Failed to add event.");
+                }
+            });
+        }
+
+        function displayEvent(event) {
+            const eventList = document.getElementById("reminderList");
+            const listItem = document.createElement("li");
+            listItem.setAttribute("data-event-id", event.id);
+
+            const eventDetails = `<strong>${event.title}</strong> - ${event.description} on ${event.date} 
+                                  <button class="delete-event" onclick="deleteEvent('${event.id}')">Delete</button>`;
+            listItem.innerHTML = eventDetails;
+            eventList.appendChild(listItem);
+        }
+
+		function deleteEvent(eventId) {
+			fetch(`/delete_event/${eventId}`, {
+				method: 'DELETE',
+			})
+			.then(response => response.json())
+			.then(data => {
+				if (data.success) {
+					removeEventFromList(eventId);
+				} else {
+					alert("Failed to delete event.");
+				}
+			});
+		}
+
+		function removeEventFromList(eventId) {
+			const eventList = document.getElementById("reminderList");
+			const eventItem = eventList.querySelector(`li[data-event-id="${eventId}"]`);
+			if (eventItem) {
+				eventList.removeChild(eventItem);
+			}
+		}
+
+    </script>
 </head>
 <body>
-	<div class="wrapper">
-		<div class="container-calendar">
-			<div id="left">
-				<h1>Event Calendar</h1>
-				<div id="event-section">
-					<h3>Add Event</h3>
-					<input type="date" id="eventDate">
-					<input type="text" id="eventTitle" placeholder="Event Title">
-					<input type="text" id="eventDescription" placeholder="Event Description">
-					<button id="add_event" onclick="add_event()">Add</button>
-				</div>
-				<div id="reminder-section">
-					<h3>Reminders</h3>
-					<!-- List to display reminders -->
-					<ul id="reminderList">
-						<li data-event-id="1">
-                            <strong>Event Title</strong>
-                            - Event Description on Event Date
-							<button class="delete-event" onclick="deleteEvent(1)">Delete</button>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="wrapper">
+        <div class="container-calendar">
+            <div id="left">
+                <h1>Event Calendar</h1>
+                <div id="event-section">
+                    <h3>Add Event</h3>
+                    <input type="date" id="eventDate">
+                    <input type="text" id="eventTitle" placeholder="Event Title">
+                    <input type="text" id="eventDescription" placeholder="Event Description">
+                    <button id="add_event" onclick="add_event()">Add</button>
+                </div>
+                <div id="reminder-section">
+                    <h3>Reminders</h3>
+                    <ul id="reminderList">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>
