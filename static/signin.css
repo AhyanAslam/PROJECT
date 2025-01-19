@@ -34,11 +34,6 @@ body {
     font-size: 16px;
 }
 
-::selection {
-    min-height: 100vh;
-    padding: 10rem 8% 2rem;
-}
-
 section {
     margin-top: 15px;
 }
@@ -47,16 +42,39 @@ section {
     margin-top: 15px;
 }
 
-/*button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #2b1807;
-    border: none;
-    border-radius: 5px;
+Header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 9%;
+    background: var(--main-color);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}*/
+    transition: 0.2 ease-in-out;
+    flex: 1;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+
+}
+
+.logo span {
+    color: var(--bg-color);
+}
+
 
 button:hover {
     background-color: #2b1807;
@@ -86,27 +104,6 @@ button:hover {
     padding: 20px 45px 20px 20px;
 
 }
-
-/*.wrapper .remeber-forget {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14.5px;
-    margin: -15px 0 15px;
-}
-
-.remeber-forget label input {
-    accent-color: var(--text-color);
-    margin-right: 3px;
-}
-
-.remeber-forget a {
-    color: var(--text-color);
-    text-decoration: none;
-}
-
-.remeber-forget a:hover {
-    text-decoration: underline;
-}*/
 
 .wrapper .btn {
     width: 100%;
