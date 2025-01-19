@@ -6,81 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="{{ url_for('static', filename='signin.css') }}">
   <title>SIGN-IN</title>
-
-  <!--<script>
-      document.addEventListener("DOMContentLoaded", function () {
-        document
-          .getElementById("loginform")
-          .addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            // Define valid credentials
-            const validUserId = "misha";
-            const validPassword = "12345";
-            const validUserId = "Ahyan";
-            const validPassword = "abcdef";
-
-
-            // Get user input
-            const userId = document.getElementById("user_id").value;
-            const userPassword = document.getElementById("password").value;
-
-            // Check credentials
-            if (userId === validUserId && userPassword === validPassword) {
-              alert("Login successful!");
-              // Redirect or perform other actions here, for example:
-              window.location.href = "/";
-            } else {
-              let errorMessage = document.getElementById("errorMessage");
-              if (!errorMessage) {
-                errorMessage = document.createElement("p");
-                errorMessage.id = "errorMessage";
-                errorMessage.style.color = "red";
-                document.getElementById("loginform").appendChild(errorMessage);
-              }
-              errorMessage.textContent = "Invalid User ID or Password.";
-            }
-          });
-      });
-    </script>-->
 </head>
 
 <body>
-  <!--Header Section Code-->
-  <!--<header class="header">
+  <header class="header">
     <div>
-      <img src="" alt="logo" />
-      <div>
-        <a href="index.html">Home</a>
-        <a href="signin.html">Login</a>
-        <a href="register.html">Register</a>
-      </div>
+      <a href="#home" class="logo">Campus <span>Buddy</span></a>
     </div>
-  </header>-->
-<div class="box">
-  <div class="wrapper login-wrapper">
-    <form action="/signin" method="POST" id="loginform">
-      <h2>Signin</h2>
-      <div class="input-box">
-        <label for="user_id">USER ID</label>
-        <input type="text" id="user_id" name="user_id" placeholder="ENTER USER_ID" required />
-      </div>
+  </header>
+  <div class="box">
+    <div class="wrapper login-wrapper">
+      <form action="/signin" method="POST" id="loginform">
+        <h2>Signin</h2>
+        <div class="input-box">
+          <label for="user_id">USER ID</label>
+          <input type="text" id="user_id" name="user_id" placeholder="ENTER USER_ID" required />
+        </div>
 
-      <div class="input-box">
-        <label for="password">PASSWORD</label>
-        <input type="password" id="password" name="password" placeholder="ENTER PASSWORD" required />
-      </div>
-      <button type="submit" class="btn">Sign In</button>
+        <div class="input-box">
+          <label for="password">PASSWORD</label>
+          <input type="password" id="password" name="password" placeholder="ENTER PASSWORD" required />
+        </div>
+        <button type="submit" class="btn">Sign In</button>
 
-      <div class="register-link">
-        <p>
-          Don't have anaccount?
-          <a href="/register">Register</a>
-        </p>
-      </div>
-    </form>
+        <div class="register-link">
+          <p>
+            Don't have anaccount?
+            <a href="/register">Register</a>
+          </p>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
 </body>
 
 </html>
