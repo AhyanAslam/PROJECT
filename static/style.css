@@ -35,10 +35,10 @@ body {
     font-size: 16px;
 }
 
-::selection {
+/*::selection {
     min-height: 100vh;
     padding: 10rem 8% 2rem;
-}
+}*/
 
 section {
     margin-top: 15px;
@@ -61,17 +61,6 @@ button {
 
 button:hover {
     background-color: #2b1807;
-}
-
-/* Links */
-a {
-    color: #2b1807;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #2b1807;
 }
 
 /* Input Fields */
@@ -133,11 +122,11 @@ Header {
     font-weight: 800;
     cursor: pointer;
     transition: 0.2 ease-in-out;
+    flex: 1;
 }
 
 .logo:hover {
     transform: scale(1.1);
-
 
 }
 
@@ -278,7 +267,6 @@ a:hover {
     z-index: 0;
 }
 
-
 .home-content h3 {
     font-size: 5rem;
     font-weight: 700;
@@ -391,6 +379,7 @@ a:hover {
     width: 1300px;
     padding: 30px 60px;
     margin: auto;
+    
 }
 
 .services h2 {
@@ -419,6 +408,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .card {
@@ -432,6 +422,7 @@ a:hover {
     cursor: pointer;
     transition: 3s;
     position: relative;
+    
 
 }
 
@@ -523,7 +514,6 @@ a:hover {
     position: relative;
     top: 10px;
 
-
 }
 
 .img:hover {
@@ -604,3 +594,10 @@ a:hover {
         text-align: center;
     }
 }
+
+
+
+
+
+
+
