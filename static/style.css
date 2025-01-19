@@ -377,7 +377,7 @@ a:hover {
 
 .services {
     width: 1300px;
-    padding: 30px 60px;
+    padding: 30px 20px;
     margin: auto;
     
 }
@@ -416,8 +416,8 @@ a:hover {
     height: 290px;
     background-color: var(--main-color);
     color: #fff;
-    padding: 40px 12px;
-    margin: 0 30px;
+    padding: 20px 12px;
+    margin: 120px 20px;
     text-align: center;
     cursor: pointer;
     transition: 3s;

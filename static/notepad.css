@@ -1,20 +1,22 @@
 textarea {
-    width: 50%; /* Full width */
-    height: 480px; /* Adjust height for bigger input area */
+    width: 50%;
+    height: 480px;
     padding: 10px;
     font-size: 16px;
     font-family: Arial, sans-serif;
     border: 1px solid #000000;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgb(0, 0, 0);
-    resize: both; /* Allow user to resize the textarea */
+    resize: both; /* Allow user to resize the note writting area */
     position: relative;
     left: 330px;
+    background-color: #2b1807;
+    color: #fbc02d;
 }
 
 textarea:focus {
     outline: none;
-    border-color: #2b1807 ; /* Highlight border on focus */
+    border-color: #2b1807 ; 
     box-shadow: #2b1807;
 }
 body{
@@ -23,4 +25,15 @@ body{
 .notes{
     background-color: #372E29;
     color: #fbc02d;
+}
+.savebt{
+    border: none;
+    background: none;
+    color: #2b1807;
+    transition: 0.3s all;
+    cursor: pointer;
+    
+}
+.savebt:hover{
+    color: red;
 }
