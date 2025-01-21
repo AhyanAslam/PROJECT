@@ -12,6 +12,8 @@ textarea {
     left: 330px;
     background-color: #2b1807;
     color: #fbc02d;
+    min-width: 500px;
+    min-height: 400px;
 }
 
 textarea:focus {
@@ -27,13 +29,20 @@ body{
     color: #fbc02d;
 }
 .savebt{
-    border: none;
-    background: none;
-    color: #2b1807;
+    background-color: #372E29;
+    color: #fbc02d;
     transition: 0.3s all;
     cursor: pointer;
-    
+    border-radius: 8px;
+    font-size: 20px;
+    padding: 8px 24px;
 }
 .savebt:hover{
-    color: red;
+    color: #2b1807;
+    background-color: #fbc02d !important;
+}
+
+.text{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
 }
