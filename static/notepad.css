@@ -17,8 +17,6 @@ textarea {
     left: 330px;
     background-color: #2b1807;
     color: #fbc02d;
-    min-width: 1200px;
-    min-height: 500px;
 }
 
 textarea:focus {
