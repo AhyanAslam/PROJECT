@@ -83,14 +83,12 @@ def write_to_file():
     with open("note.txt", "a") as file:
         file.write(text + "\n\n")  
     
-    return render_template('viewnotes.html')
-
-    #return "Text has been written to the file! <a href='/notepad'>Go Back</a>"
+    # return render_template('viewnotes.html')
+    
+    # return "Text has been written to the file! <a href='/notepad'>Go Back</a>"
+    return "Text has been written to the file! <a href='/viewnotes'>Go Back</a>"
 
 #View notes code
-
-
-
 
 @app.route('/viewnotes', methods=['GET'])
 def show_notes():
