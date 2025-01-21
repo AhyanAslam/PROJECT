@@ -1,3 +1,8 @@
+body{
+    background-color: #fbc02d;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 textarea {
     width: 50%;
     height: 480px;
@@ -12,8 +17,8 @@ textarea {
     left: 330px;
     background-color: #2b1807;
     color: #fbc02d;
-    min-width: 500px;
-    min-height: 400px;
+    min-width: 1200px;
+    min-height: 500px;
 }
 
 textarea:focus {
@@ -21,9 +26,7 @@ textarea:focus {
     border-color: #2b1807 ; 
     box-shadow: #2b1807;
 }
-body{
-    background-color: #fbc02d;
-}
+
 .notes{
     background-color: #372E29;
     color: #fbc02d;
@@ -44,5 +47,11 @@ body{
 
 .text{
     font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #2b1807;
+    font-size: 44px;
 }
