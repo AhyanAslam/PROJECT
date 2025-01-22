@@ -48,7 +48,8 @@ def signin():
         if any(user["user_id"] == user_id and user["password"] == password for user in users):
             return redirect("/landing")  # ✅ Redirect to home page
         else:
-            flash("Invalid User ID or Password.")  # Show error message
+            #flash("Invalid User ID or Password.")  # Show error message
+            return "Invalid Password or User name"
 
     return render_template("signin.html")  # Render signin page again if failed
 
